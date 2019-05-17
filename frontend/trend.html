@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trending</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $(function()
+		{
+		$("#header").load("/test");
+		});
+		
+    </script>
+</head>
+<style>
+    .col-sm-2 img
+    {
+        width:250px;
+        height:150px;
+    }
+    .videoname
+    {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .row
+    {
+        margin-top: 10px;
+    }
+    .duration
+    {
+        position:absolute;
+        background-color:#3C3F41;
+        width:35px;
+        height:15px;
+        border-radius:10%;
+        margin-top:-20px;
+        margin-left:210px;
+    }
+    .duration p
+    {
+        font-size:12px;
+        color:white;
+        margin-top:-1px;
+    }
+    .viewstyle
+    {
+        font-size:14px;
+        color:#999999;
+    }
+</style>
+<body>
+<div id="header"></div>
+<div style="width:100%">
+<div class="container-fluid" style="margin-top:10px;padding-left:50px;background-color:#FAFAFA">
+    <h4><b>Movies that you may like:</b></h4>
+	<br>
+	{% for i in queryset %}
+		<div class="row" style="width:100%;">
+		<div class="col-sm-2">
+            <a href="/teraghat?url={{i.movie_link}}"><img src="{{i.movie_img.url}}" alt=""></a>
+            <div class="duration" >
+                <center><p style="margin-top:1px;">25:56</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8" style="margin-left:45px">
+            <a href="/teraghat?url={{i.movie_link}}"><p class="videoname" style="font-size:20px">{{i.movie_name}}</p></a>
+            <p class="viewstyle"> Live Hindi <br>20,45,467 views<br>{{i.movie_genre}} </p>
+            </div>
+		</div>
+	{% endfor %}
+	<!--
+	{% for r in recommendation %}
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <a href="/teraghat?url={{i.movie_link}}"><img src="{% static 'image/amit.jpg' %}" alt=""></a>
+            <div class="duration" >
+                <center><p style="margin-top:1px;">10:15</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8" style="margin-left:45px">
+            <a href="/teraghat?url={{i.movie_link}}"><p class="videoname" style="font-size:20px"></p></a>
+            <p class="viewstyle"> Amit Bhadana <br>PREDICTION: {{r.1}}<br>GENRE:{{r.3}} :) </p>
+            </div>
+      </div>
+	  {% endfor %}
+    
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/gym.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p style="margin-top:1px;">8:46</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8" style="margin-left:45px">
+            <p class="videoname" style="font-size:20px">Best Gym Workout Training Best Trap & Rap 2018 GYM Channel</p>
+            <p class="viewstyle"> GYM Channel <br>1,09,878 views<br>Description:GYM Workout </p>
+            </div>
+      </div>
+
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <a href="/teraghat"><img src="{% static 'image/tera.jpg' %}" alt=""></a>
+            <div class="duration" >
+                <center><p style="margin-top:2px;">5:16</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8" style="margin-left:45px">
+            <p class="videoname" style="font-size:20px">Tera Ghata | Gajendra Verma Ft. Karishma Sharma | Vikram Singh | Official Video</p>
+            <p class="viewstyle"> Gajendra Verma <br>1,09,87,547 views<br>Description:Directed by: Vikram Singh Producer: Sanjay Kukreja Starring : Karishma Sharma Production: Virtual Planet Production</p>
+            </div>
+      </div>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/cofffee.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>45:15</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8" style="margin-left:45px">
+            <p class="videoname" style="font-size:20px">Rapid Fire With Twinkle Khanna | Karan Johar | Talking About Personal Life | Akshay Kumar | Bollywood</p>
+            <p class="viewstyle"> Bollywood Bai <br>447 views<br>Description:Rapid fire with Twinkal Khanna and Akshay Kumar</p>
+            </div>
+      </div>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/india.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>15:35</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8" style="margin-left:45px">
+            <p class="videoname" style="font-size:20px">India Vs West Indies 4th ODI 2018 | Highlights & Analysis | Rohit Sharma 162 Runs Innings</p>
+            <p class="viewstyle"> PTV Cricket <br>3,45,677 views<br>Description:INDIA vs WEST INDIES Highlights</p>
+            </div>
+      </div>
+
+-->
+</div>
+</div>
+</body>
+</html>

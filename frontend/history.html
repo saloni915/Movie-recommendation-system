@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Channel Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $(function()
+		{
+		$("#header").load("/test");
+		});
+    </script>
+</head>
+<style>
+    .container-fluid .row
+    {
+        padding-bottom:5px;
+    }
+    .container-fluid .row
+    {
+        margin-left:15px;
+    }
+    .col-sm-8
+    {
+        margin-left:55px;
+    }
+    .col-sm-2 img
+    {
+        width:250px;
+        height:150px;
+    }
+    .videoname
+    {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .row
+    {
+        margin-top: 10px;
+    }
+    .duration
+    {
+        position:absolute;
+        background-color:#3C3F41;
+        width:35px;
+        height:15px;
+        border-radius:10%;
+        margin-top:-20px;
+        margin-left:210px;
+    }
+    .duration p
+    {
+        font-size:12px;
+        color:white;
+        margin-top:-2px;
+    }
+    .viewstyle
+    {
+        font-size:14px;
+        color:#999999;
+    }
+</style>
+<body>
+<div id="header"></div>
+<div style="width:100%">
+<div class="container-fluid" style="padding-left:50px;background-color:#FAFAFA">
+    <h4><b>Watch History</b></h4><br>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/akshay.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>18:12</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8">
+            <p class="videoname" style="font-size:20px">Comedy Hunt 2015 with Akshay Kumar# boss#akshay kumar no1#killer_@actor#patriotic</p>
+            <p class="viewstyle"> Comedy Shot <br>447 views<br>Description:Some comedy sence of Akshay Kumar</p>
+            </div>
+      </div>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/photo1.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>10:07</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8">
+            <p class="videoname" style="font-size:20px">How the movie is produces by directors</p>
+            <p class="viewstyle"> New Things <br>447 views<br>Description:Full knowledge of producing the movies with starting</p>
+            </div>
+      </div>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/photo2.png' %}" alt="">
+            <div class="duration" >
+                <center><p>07:06</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8">
+            <p class="videoname" style="font-size:20px">Whatsapp Funny Videos | Best funny Video</p>
+            <p class="viewstyle"> HipHopBD <br>447 views<br>Description:HI friends watch your best funny videos here</p>
+            </div>
+      </div>
+
+    <div class="row" style="width:100%">
+        <div class="col-sm-2">
+            <img src="{% static 'image/movie.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>30:06</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8">
+            <p class="videoname" style="font-size:20px">Bad Boys II | sense | Hollywood Movie</p>
+            <p class="viewstyle"> Movies Hunt <br>447 views<br>Description:Bad Boys Action movie by vin deisel</p>
+            </div>
+      </div>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/pubg.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>10:16</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8">
+            <p class="videoname" style="font-size:20px">Most PUBG kill in Solo</p>
+            <p class="viewstyle"> PUBG KING <br>447 views<br>Description:Most PUBG kill in solo with a great filling</p>
+            </div>
+      </div>
+    <div class="row" style="width:100%;">
+
+        <div class="col-sm-2">
+            <img src="{% static 'image/song.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>15:08</p></center>
+            </div>
+        </div>
+            <div class="col-sm-8">
+            <p class="videoname" style="font-size:20px">Mixed Song | Tera Ghata | O hujur | Teri Meri Kahani</p>
+            <p class="viewstyle"> Song Bash <br>447 views<br>Description:Mixed song with all of the singer</p>
+            </div>
+      </div>
+
+
+</div>
+</div>
+</body>
+</html>

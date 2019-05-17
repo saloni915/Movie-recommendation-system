@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+       $(function()
+	{
+		$("#header").load("/test");
+	});
+    </script>
+</head>
+<body>
+   
+  <div id="header"></div>
+<div class="container" style="background-color:#fafafa; margin-left:200px;">
+
+  <h1>Create Channel:</h1>
+  </br>
+   <form method="post">
+       {% csrf_token %}
+
+    <div class="form-group" style="width:40%">
+      <label>Channel Name:</label>
+      <input type="text" class="form-control" name="Channel_name" placeholder="Enter channel name" required="true"></br>
+	
+	<label>Channel Description:</label>
+
+	<textarea class="form-control" rows="3" name="description" style="width:100%;"></textarea>
+	</br>  
+	 <label>Email for buisness inquiries:</label>
+	 <input type="email" class="form-control" name="user_email" placeholder="Enter Email address" required="true"></br>
+	
+	
+	 <label>Links:</label>
+
+	 <input type="text" class="form-control" name="facebook" placeholder="Official Facebook url" required="true"></br>
+	
+	<input type="text" class="form-control" name="instagram" placeholder="Official Instagram url" required="true"></br>
+	
+	
+	</div>
+  
+    <div class="form-group ">
+		  <input class="btn btn-primary btn-lg btn-block login-button" type="submit" style="width:10%;" value="Done"/>
+	  </div>
+    {% if channel_name %}
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            {{ channel_name }}
+                        </div>
+                        <br>
+                        {% endif %}
+                        {% if user_email or facebook or instagram %}
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            {{ user_email }}
+                        </div>
+                         <br>
+                        {% endif %}
+  
+  </form>
+  
+</div>
+  </body>
+  </html>

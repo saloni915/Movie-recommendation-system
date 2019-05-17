@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+{% include "test.html" %}
+<html lang="en">
+<head>
+  <title>Upload</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container" style="background-color:#fafafa;">
+  <form method="post" style="margin-left:100px">
+	{% csrf_token %}
+  <h1>Upload Video:</h1>
+
+<br><br>
+<label>Select Video:</label>
+	  <input type="file" name="video"><br>
+
+
+<div class="form-group">
+	<label>video name:</label>
+	<input class="form-control" type="text" name="video_name" style="width:35%;"/><br>
+
+	<label>Select Video thumbnail:</label>
+	  <input type="file" name="image"><br>
+
+	<label>Description:</label>
+	<textarea class="form-control" rows="3" name="description" id="comment" style="width:35%;"></textarea>
+	<br>
+	<label>Video Duration:</label>
+	<input class="form-control" type="datetime" name="duration" style="width:35%;"/><br>
+	<label for="sel1">Select list:</label>
+	<select class="form-control" id="sel1" name="category" style="width:35%; height:10%;">
+		<option>Education</option>
+		<option>politics</option>
+		<option>Entertainment</option>
+		<option>Sports</option>
+		<option>Others</option>
+	</select>
+</div>
+<br>
+	  <div class="form-group ">
+		  <input class="btn btn-primary btn-lg btn-block login-button" type="submit" style="width:10%;" value="Upload"/>
+	  </div>
+
+  </form>
+</div>
+
+</body>
+</html>

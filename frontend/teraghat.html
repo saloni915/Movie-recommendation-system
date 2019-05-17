@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'test.html' %}
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+$(document).ready(function(){
+    $("#demo1").toggle(
+        function(){$("#demo1").css({"color": "#007bff"});},
+        function(){$("#demo1").css({"color": "black"});
+    });
+	$("#demo2").toggle(
+        function(){$("#demo2").css({"color": "#007bff"});},
+        function(){$("#demo2").css({"color": "black"});
+    });
+});
+
+</script>
+</head>
+<body>
+ <div class="container">
+<iframe width="850" height="480" style="margin-top:30px" src="{{url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h3 class="text-muted">328404 views
+  <a class="text-muted" href="#"><i id="demo1" style="font-size:18px;margin-left:400px" class="fas fa-thumbs-up"></i></a> 37000 &nbsp&nbsp&nbsp&nbsp
+  <a class="text-muted" href="#"><i id="demo2" style="font-size:18px;" class="fas fa-thumbs-down"></i></a> 45</h3>
+  <hr>
+  <h5>957 comments</h5>
+
+  <hr style="margin-top:-20px;margin-left:50px;"><br><br>
+  <p>
+  <img src="{% static 'image/profile.png' %}" class="rounded-circle" style="width:70px;height:70px;">
+    Username<br>
+  <h6 style="margin-left:80px;margin-top:-40px">your comment</h6>
+  </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Channel Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $(function()
+			{
+				$("#navbar").load("/navigationbar");
+			});
+    </script>
+</head>
+<style>
+    .col-sm-2 img
+    {
+        width:220px;
+        height:120px;
+    }
+    .videoname
+    {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .duration
+    {
+        position:absolute;
+        background-color:#3C3F41;
+        width:35px;
+        height:15px;
+        border-radius:10%;
+        margin-top:-20px;
+        margin-left:180px;
+    }
+    .duration p
+    {
+        font-size:12px;
+        color:white;
+        margin-top:-2px;
+    }
+    .viewstyle
+    {
+        font-size:12px;
+        color:#999999;
+    }
+</style>
+<body>
+    <div id="navbar"></div>
+    <div class="row" style="width:100%; margin-top:10px;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <img src="{% static 'image/photo2.png' %}" alt="">
+            <div class="duration" >
+                <center><p>10:06</p></center>
+            </div>
+            <p class="videoname">Funny video of 2018</p>
+            <p class="viewstyle">12,345 views</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="{% static 'image/akshay.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>30:15</p></center>
+            </div>
+            <p class="videoname">Comedy Hunt 2015 with Akshay Kumar</p>
+            <p class="viewstyle">64,578 views</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="{% static 'image/photo3.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>07:08</p></center>
+            </div>
+            <p class="videoname">Must Watch New Funny comedy video</p>
+            <p class="viewstyle">45,323 views</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="{% static 'image/photo4.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>10:11</p></center>
+            </div>
+            <p class="videoname">Comedy Video PK With Virat</p>
+            <p class="viewstyle">3,45,667 views</p>
+        </div>
+                <div class="col-sm-2">
+            <img src="{% static 'image/photo5.jpg' %}" alt="">
+            <div class="duration" >
+                <center><p>10:11</p></center>
+            </div>
+            <p class="videoname">Animal Funny Video with Children</p>
+            <p class="viewstyle">44,745 views</p>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</body>
+</html>

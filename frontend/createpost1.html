@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Create a Post </title>
+</head>
+
+<body>
+<h1>Create a Post </h1>
+
+{% for match in sr %}
+<br>
+<p class="text-success" style="font-size:20px">{{ match.video_name }}</p>
+
+<br><img src="{{ match.video_thumbnail.url }}"/>
+{% endfor %}
+
+</body>
+</html>
